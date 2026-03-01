@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-deep: #0a192f;
+  --color-royal-soft: #1e3a8a;
+  --color-glow-purple: #a855f7;
+  
+  @keyframes pulse-glow {
+    0%, 100% { border-color: rgba(168, 85, 247, 0.3); box-shadow: 0 0 5px rgba(168, 85, 247, 0.2); }
+    50% { border-color: rgba(168, 85, 247, 0.8); box-shadow: 0 0 15px rgba(168, 85, 247, 0.4); }
+  }
+}
+
+@utility animate-glow {
+  animation: pulse-glow 3s infinite ease-in-out;
+}
+
+body {
+  @apply bg-navy-deep text-slate-200 overflow-y-auto;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Remix: Athena AI Assistant",
+  "description": "A professional desktop-style AI assistant with file generation and history tracking.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
